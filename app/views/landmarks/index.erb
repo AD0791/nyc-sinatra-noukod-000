@@ -2,13 +2,7 @@
 
 <ol>
 <%@landmarks.each do |landmark|%>
-  <li> <a href="/landmarks/<%= landmark.id%>"> <%=landmark.name%>, <%= landmark.year_completed%></a>
-    <ul>
-    <%landmark.figure.each do |figure|%>
-    <li><%=figure.name%></li>
-    <%end%>
-    </ul>
-  </li>
+  <li> <a href="/landmarks/<%= landmark.id%>"> <%=landmark.name%>, <%= landmark.year_completed%></a></li>
 <% end %>
 </ol>
 
