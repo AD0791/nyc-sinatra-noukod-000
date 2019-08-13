@@ -63,7 +63,7 @@ describe LandmarksController do
 
     visit "/landmarks/#{@original_landmark.id}/edit"
     fill_in :name, with: "BQE!!!!"
-    fill_in :year_completed, with: 9999
+    fill_in :landmark_year, with: 9999
     click_button "Edit Landmark"
 
     expect(page.body).to include("BQE!!!!")
