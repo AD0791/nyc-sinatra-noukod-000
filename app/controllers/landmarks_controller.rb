@@ -13,4 +13,10 @@ class LandmarksController < ApplicationController
     #binding.pry
     erb :'landmarks/show'
   end
+
+  post '/landmarks' do
+    @landmarks = Landmark.create(params[:Landmark]) unless params[:landmark][:name].empty?&&params[:landmark][:year_completed].empty?
+        redirect to '/landmarks/#{@landmarks.id}'
+    end
+  end
 end
