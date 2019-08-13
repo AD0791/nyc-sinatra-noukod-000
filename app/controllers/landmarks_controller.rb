@@ -7,4 +7,10 @@ class LandmarksController < ApplicationController
   get '/landmarks/new' do
     erb :'landmarks/new'
   end
+
+  get '/landmarks/:id' do
+    @landmarks = Landmark.find_by_id(params[:id])
+    #binding.pry
+    erb :'landmarks/show'
+  end
 end
