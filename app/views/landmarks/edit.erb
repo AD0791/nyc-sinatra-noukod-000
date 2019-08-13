@@ -3,7 +3,9 @@
 <form  action="/landmarks/<%=@landmarks.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label for="landmark_name">Name</label><br>
-  <input type="text" name="Landmark[name]" value="<%=@landmarks.name%>">
+  <input type="text" name="Landmark[name]" value="<%=@landmarks.name%>"><br>
+  <label for="landmark_year">Name</label><br>
+  <input type="text" id ="landmark_year" name="Landmark[name]" value="<%=@landmarks.name%>"> <br>
 </form>
 
 <a class="button" href="/figures">Landmarks</a>
