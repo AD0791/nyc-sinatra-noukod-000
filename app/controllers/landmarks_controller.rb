@@ -20,5 +20,5 @@ class LandmarksController < ApplicationController
     binding.pry
         redirect to '/landmarks/#{@landmarks.id}'
   end
-  
+
 end
