@@ -1,0 +1,25 @@
+<h1>The Figures</h1>
+
+<h2>The Name and Their Title</h2>
+
+<ol>
+<%@figures.each do |figure|%>
+  <li> <a href="/figures/<%= figure.id%>"> <%=figure.name%></a>
+    <ul>
+    <%figure.titles.each do |title|%>
+    <li><%=title.name%></li>
+    <%end%>
+    </ul>
+  </li>
+<% end %>
+</ol>
+
+<p>
+<a class="button" href="/figures/new">Create New Figure</a>
+</p>
+<p>
+<a class="button" href="/landmarks">View Landmarks</a>
+</p>
+<p>
+<a class="button" href="/">Home</a>
+</p>
