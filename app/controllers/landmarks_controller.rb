@@ -8,17 +8,17 @@ class LandmarksController < ApplicationController
     erb :'landmarks/new'
   end
 
-  get '/landmarks/:id' do
-    @landmarks = Landmark.find_by_id(params[:id])
-    #binding.pry
-    erb :'landmarks/show'
-  end
-
   post '/landmarks' do
     #binding.pry
     @landmarks = Landmark.create(params[:landmark]) unless params[:landmark][:name].empty?||params[:landmark][:year_completed].empty?
     binding.pry
     redirect to '/landmarks/#{@landmarks.id}'
+  end
+
+  get '/landmarks/:id' do
+    @landmarks = Landmark.find_by_id(params[:id])
+    #binding.pry
+    erb :'landmarks/show'
   end
 
 end
